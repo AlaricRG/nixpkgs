@@ -30,6 +30,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   passthru.updateScript = gitUpdater { rev-prefix = "wrangler@"; };
 
+dontCheckForBrokenSymlinks = true;
+
   buildInputs =
     [
       llvmPackages.libcxx
